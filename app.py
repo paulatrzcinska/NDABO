@@ -1,5 +1,6 @@
 from flask import Flask, request, jsonify, render_template
 import math
+import re
 
 app = Flask(__name__)
 
@@ -15,7 +16,7 @@ def oblicz():
     try:
         # Bezpieczne przekształcenie wyrażenia: zamień ^ na **, √ na math.sqrt
         wyrazenie = wyrazenie.replace("^", "**")
-        wyrazenie = wyrazenie.replace("√", "math.sqrt")
+        wyrazenie = re.sub(r"√(\d+(\.\d+)?)", r"math.sqrt(\1)", wyrazenie)
 
         # Zbiór dozwolonych funkcji
         bezpieczny_kontekst = {
