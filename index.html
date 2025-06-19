@@ -1,0 +1,27 @@
+<!doctype html>
+<html>
+<head>
+    <title>Kalkulator</title>
+</head>
+<body>
+    <h1>Prosty Kalkulator</h1>
+    <form method="post">
+        <input type="text" name="liczba1" placeholder="Liczba 1" required>
+        <input type="text" name="liczba2" placeholder="Liczba 2 (opcjonalna)">
+        <select name="operacja">
+            <option value="dodaj">+</option>
+            <option value="odejmij">-</option>
+            <option value="pomnóż">*</option>
+            <option value="podziel">/</option>
+            <option value="potęga">^ (potęga)</option>
+            <option value="pierwiastek">√ (pierwiastek z liczby 1)</option>
+        </select>
+        <button type="submit">Oblicz</button>
+    </form>
+
+    {% if wynik is not none %}
+        <h2>Wynik: {{ wynik }}</h2>
+    {% endif %}
+</body>
+</html>
+
