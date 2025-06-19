@@ -1,0 +1,21 @@
+name: Testuj Flask Kalkulator
+
+on: [push, pull_request]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Zainstaluj Pythona
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+
+      - name: Zainstaluj zależności
+        run: |
+          pip install -r requirements.txt
+
+      - name: Uruchom testy
+        run: pytest
