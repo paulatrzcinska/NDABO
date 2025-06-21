@@ -46,6 +46,11 @@ jobs:
           name: allure-report
           path: allure-report
 
+      - name: Skonfiguruj Git usera
+        run: |
+          git config --global user.name "github-actions"
+          git config --global user.email "github-actions@github.com"
+
       - name: Deploy do GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
