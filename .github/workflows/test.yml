@@ -41,7 +41,7 @@ jobs:
     runs-on: ubuntu-latest
     if: github.ref == 'refs/heads/main'
     steps:
-      - name: Checkout 
+      - name: Checkout
         uses: actions/checkout@v3
 
       - name: Skonfiguruj Git usera
@@ -56,4 +56,7 @@ jobs:
           path: allure-report
 
       - name: Deploy do GitHub Pages
-        uses: peaceiris/
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: allure-report
