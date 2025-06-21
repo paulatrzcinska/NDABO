@@ -41,18 +41,19 @@ jobs:
     runs-on: ubuntu-latest
     if: github.ref == 'refs/heads/main'
     steps:
-      - uses: actions/download-artifact@v4
-        with:
-          name: allure-report
-          path: allure-report
+      - name: Checkout 
+        uses: actions/checkout@v3
 
       - name: Skonfiguruj Git usera
         run: |
           git config --global user.name "github-actions"
           git config --global user.email "github-actions@github.com"
 
-      - name: Deploy do GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
+      - name: Pobierz raport Allure
+        uses: actions/download-artifact@v4
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: allure-report
+          name: allure-report
+          path: allure-report
+
+      - name: Deploy do GitHub Pages
+        uses: peaceiris/
