@@ -49,13 +49,13 @@ button {
   font-size: 18px;
   border: none;
   border-radius: 10px;
-  background: pink;
+  background: white;
   cursor: pointer;
   transition: 0.2s;
 }
 
 button.operator {
-  background: #f9a825;
+  background: pink;
   color: white;
 }
 
