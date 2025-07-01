@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="pl">
 <head>
-  <! -- Komentarz -->
+<!-- Komentarz -->
   <meta charset="UTF-8">
   <title>Kalkulator</title>
   <style>
@@ -103,13 +103,20 @@
       },
       body: JSON.stringify({ wyrazenie: ekran.value })
     })
-    .then(res => res.json())
-    .then(data => {
-      if (data.wynik !== undefined) {
-        ekran.value = data.wynik;
-      } else {
-        ekran.value = "Błąd";
+    .then(response => 
+      {
+      if (!response.ok) {
+        throw new Error("Błąd serwera: " + response.status);
       }
+      return response.json();
+    })
+    .then(data => {
+      ekran.value = data.wynik;
+    })
+    .catch(error => 
+    {
+      console.error("Błąd", error);
+      ekran.value = "Błąd połączenia lub serwera";
     });
   }
 </script>
