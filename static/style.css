@@ -20,7 +20,7 @@ body {
 
 .kalkulator {
   background: white;
-  border: 3px solid #d81b60;
+  border: 10px solid #d81b60;
   padding: 20px;
   border-radius: 15px;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
@@ -49,7 +49,7 @@ button {
   font-size: 18px;
   border: none;
   border-radius: 10px;
-  background: #e0e0e0;
+  background: pink;
   cursor: pointer;
   transition: 0.2s;
 }
