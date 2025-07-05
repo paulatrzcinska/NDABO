@@ -2,19 +2,19 @@
 
 NDABO to prosta aplikacja kalkulatora internetowego, która umożliwia wykonywanie podstawowych operacji matematycznych w przeglądarce. Projekt zrealizowany z użyciem HTML, CSS oraz Pythona (Flask) po stronie serwera.
 
-## ✨ Funkcje
+## Funkcje
 
 - Dodawanie, odejmowanie, mnożenie, dzielenie
 - Interaktywny interfejs webowy
 - Obsługa przez prosty backend w Pythonie (Flask)
 
-## 🛠️ Technologie
+## Technologie
 
 - **HTML**, **CSS** – warstwa front-endowa
 - **Python (Flask)** – backend do obsługi logiki i żądań
 - **Render** – platforma do hostowania aplikacji
 
-## 🚀 Instrukcja uruchomienia lokalnie
+## Instrukcja uruchomienia lokalnie
 
 1. **Sklonuj repozytorium:**
    ```bash
@@ -36,11 +36,11 @@ NDABO to prosta aplikacja kalkulatora internetowego, która umożliwia wykonywan
 
 4. Aplikacja będzie dostępna pod adresem `http://localhost:5000`.
 
-## 🌍 Deployment na Render
+## Deployment na Render
 
 Aplikacja została wdrożona za pomocą platformy **Render**.
 
-🔗 [Zobacz działającą aplikację](https://ndabo.onrender.com/)
+ [Zobacz działającą aplikację](https://ndabo.onrender.com/)
 
 ### Jak wdrożyć samodzielnie?
 
