@@ -52,3 +52,7 @@ Aplikacja została wdrożona za pomocą platformy **Render**.
    - Start command: `python app.py` lub użyj `gunicorn` jeśli aplikacja jest produkcyjna
    - Port: domyślnie `5000`
 5. Render automatycznie uruchomi Twoją aplikację
+
+### Testy
+
+[Zobacz raport z testów (Allure)](https://paulatrzcinska.github.io/NDABO/)
